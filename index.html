@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Something</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="clearFix">
+        <div class="box_clock">
+            <form class="js-form form">
+                <input type="text" placeholder="What is your name?" />
+            </form>
+            <h4 class="js-greetings greetings"></h4>
+            <div class="js_clock_container">
+                <div class="box_clock_analog">
+                    <div class="hand hour"></div>
+                    <div class="hand minute"></div>
+                    <div class="hand second"></div>
+                </div>
+                <div class="box_clock_digital">
+                    <div class="inner_clock_digital">
+                        <span class="js_ampm text_clock">AM</span>
+                        <span class="js_clock text_clock">00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box_todo">
+            <!-- <form class="js-toDoForm">
+                <input type="text" placeholder="Write a to do" />
+            </form>
+            <ul class="js-toDoList">
+            </ul> -->
+            <input name="todoInput" placeholder="Add task" />
+
+            <h2>Pending</h2>
+            <ul class="pending_list"></ul>
+
+            <h2>Finished</h2>
+            <ul class="finished_list"></ul>
+            <span class="js_weather"></span>
+        </div>
+    </div>
+    <script src="clock.js"></script>
+    <script src="gretting.js"></script>
+    <script src="todo.js"></script>
+    <script src="bg.js"></script>
+    <script src="weather.js"></script>
+</body>
+
+</html>
