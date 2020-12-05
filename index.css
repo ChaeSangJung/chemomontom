@@ -1,6 +1,9 @@
 body {background-color: #2c3e50;}
 
-.clearFix {}
+a {text-decoration:none;color:#333;}
+img {vertical-align: top;}
+.clearFix:after {content:"";display:block;width:0;height:0;overflow:hidden;clear:both;}
+ul:after,ol:after,dl:after {content:"";display:block;width:0;height:0;overflow:hidden;clear:both;}
 
 .btn {cursor: pointer;}
 .clicked {color: #7f8c8d;}
@@ -19,19 +22,27 @@ body {background-color: #2c3e50;}
   }
 }
 
+.box_clock, .box_todo {display: block;float: left;width: 50%;box-sizing: border-box;}
+.box_geeting {padding-top: 110px; box-sizing: border-box;text-align: center;}
+.box_geeting input {padding: 10px;font-size: 27px;font-family: 'Roboto', sans-serif;color: #333; box-sizing: border-box;outline: none;box-shadow: 10px 10px 10px#2c3e50;}
+
+
 .bgImage {position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;animation: fadeIn 0.5s linear;}
 
 .js_clock_container {position: relative;width: 316px;margin: 0 auto;}
 
 .box_clock_analog {position: relative;width: 300px;height: 300px;background-color: #fff;border-radius: 50%;border: 8px solid #000;box-shadow: 2px 2px 8px 2px rgba(22, 45, 75, 0.92);}
-.box_clock_analog::before {content: "";width: 15px;height: 15px;border-radius: 50%;background-color: #000;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 100;}
+.box_clock_analog::before {content: "";width: 10px;height: 10px; border-radius: 50%;background-color: #000;position: absolute;top: 46%;left: 44%;transform: translate(-50%, -50%);z-index: 100;}
 .hand {z-index: 5;position: absolute;bottom: 50%;left: 50%;transform: translateX(-50%) rotate(90deg);transform-origin: bottom;border-top-left-radius: 7px;border-top-right-radius: 7px;}
 
-.hour {width: 8px;height: 28%;margin-left: -4px;background-color: #000;}
-.minute {width: 5px;height: 38%;margin-left: -2.5px;background-color: #000;}
-.second {width: 3px;height: 40%;margin-left: -1.5px;background-color: #ff0000;}
+.hour {width: 5px;height: 28%;margin-left: -2.5px;background-color: #333;}
+.minute {width: 3px;height: 38%;margin-left: -1.5px;background-color: #333;}
+.second {width: 2px;height: 40%;margin-left: -1px;background-color: #333;}
 
-.box_clock_digital {position: absolute;width: 100%;font-size: 0;text-align: center;top: 145px;left: 75px;}
-.box_clock_digital .inner_clock_digital {display: inline-block;padding: 3px 3px 3px;border: 1px solid #c1c1c1;background: #f7f7f7; box-sizing: border-box;}
+.box_main_clock {position: absolute;width: 180px;height: 180px;margin-top: -150px;margin-left: -110px; border-radius: 50%;border: 1px solid #dfdfdf;top: 66%;left: 50%;}
+.box_second {position: absolute;width: 90px;height: 90px;margin-top: 85px;margin-left: 20px; border-radius: 50%;border: 1px solid #dfdfdf;top: 28%;left: 50%;}
+
+.box_clock_digital {position: absolute;width: 100%;font-size: 0;text-align: center;top: 23px;}
+.box_clock_digital .inner_clock_digital {display: inline-block;padding: 3px 3px 3px;box-sizing: border-box;}
 .box_clock_digital .text_clock {display: inline-block;font-size: 14px;color: #333;vertical-align: top;}
 .box_clock_digital .text_clock + .text_clock {margin-left: 5px;}

@@ -2,23 +2,31 @@
 <html>
 
 <head>
-    <title>Something</title>
+    <title>Momotom</title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="reset.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
     <div class="clearFix">
         <div class="box_clock">
-            <form class="js-form form">
-                <input type="text" placeholder="What is your name?" />
-            </form>
-            <h4 class="js-greetings greetings"></h4>
+            <div class="box_geeting">
+                <form class="js-form form">
+                    <input type="text" placeholder="What is your name?" />
+                </form>
+                <h4 class="js-greetings greetings"></h4>
+            </div>            
             <div class="js_clock_container">
                 <div class="box_clock_analog">
-                    <div class="hand hour"></div>
-                    <div class="hand minute"></div>
-                    <div class="hand second"></div>
+                    <div class="box_main_clock">
+                        <div class="hand hour"></div>
+                        <div class="hand minute"></div>
+                    </div>
+                    <div class="box_second">
+                        <div class="hand second"></div>
+                    </div>
                 </div>
                 <div class="box_clock_digital">
                     <div class="inner_clock_digital">
@@ -34,14 +42,17 @@
             </form>
             <ul class="js-toDoList">
             </ul> -->
+            <div class="box_weather">
+                <span class="js_weather"></span>
+            </div>
+
             <input name="todoInput" placeholder="Add task" />
 
             <h2>Pending</h2>
             <ul class="pending_list"></ul>
 
             <h2>Finished</h2>
-            <ul class="finished_list"></ul>
-            <span class="js_weather"></span>
+            <ul class="finished_list"></ul>            
         </div>
     </div>
     <script src="clock.js"></script>
