@@ -42,7 +42,7 @@ ul:after,ol:after,dl:after {content:"";display:block;width:0;height:0;overflow:h
 .box_main_clock {position: absolute;width: 180px;height: 180px;margin-top: -150px;margin-left: -110px; border-radius: 50%;border: 1px solid #dfdfdf;top: 66%;left: 50%;}
 .box_second {position: absolute;width: 90px;height: 90px;margin-top: 85px;margin-left: 20px; border-radius: 50%;border: 1px solid #dfdfdf;top: 28%;left: 50%;}
 
-.box_clock_digital {position: absolute;width: 100%;font-size: 0;text-align: center;top: 23px;}
-.box_clock_digital .inner_clock_digital {display: inline-block;padding: 3px 3px 3px;box-sizing: border-box;}
+.box_clock_digital {position: absolute;width: 95px;height: 95px; font-size: 0;text-align: left;top: 85px;right: 42px; transform: rotate(90deg);}
+.box_clock_digital .inner_clock_digital {display: inline-block;padding: 3px 3px 3px;box-sizing: border-box; font-family: 'Abril Fatface', cursive;}
 .box_clock_digital .text_clock {display: inline-block;font-size: 14px;color: #333;vertical-align: top;}
 .box_clock_digital .text_clock + .text_clock {margin-left: 5px;}
