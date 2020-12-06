@@ -11,7 +11,7 @@ ul:after,ol:after,dl:after {content:"";display:block;width:0;height:0;overflow:h
 .form,
 .greetings {display: none;}
 
-.showing {display: block;}
+.showing {display: block; font-family: 'Abril Fatface', cursive;font-size: 30px;}
 
 @keyframes fadeIn {
   from {
@@ -23,13 +23,13 @@ ul:after,ol:after,dl:after {content:"";display:block;width:0;height:0;overflow:h
 }
 
 .box_clock, .box_todo {display: block;float: left;width: 50%;box-sizing: border-box;}
-.box_geeting {padding-top: 110px; box-sizing: border-box;text-align: center;}
-.box_geeting input {padding: 10px;font-size: 27px;font-family: 'Roboto', sans-serif;color: #333; box-sizing: border-box;outline: none;box-shadow: 10px 10px 10px#2c3e50;}
+.box_geeting {height: 60px; margin-top: 110px; box-sizing: border-box;text-align: center;}
+.box_geeting input {padding: 10px;font-size: 27px;font-family: 'Roboto', sans-serif;color: #333; box-sizing: border-box;outline: none;background: rgba(255,255,255,0.3); box-shadow: 10px 10px 10px#2c3e50;}
 
 
 .bgImage {position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: -1;animation: fadeIn 0.5s linear;}
 
-.js_clock_container {position: relative;width: 316px;margin: 0 auto;}
+.js_clock_container {position: relative;width: 316px;margin: 0 auto;padding-top: 50px;}
 
 .box_clock_analog {position: relative;width: 300px;height: 300px;background-color: #fff;border-radius: 50%;border: 8px solid #000;box-shadow: 2px 2px 8px 2px rgba(22, 45, 75, 0.92);}
 .box_clock_analog::before {content: "";width: 10px;height: 10px; border-radius: 50%;background-color: #000;position: absolute;top: 46%;left: 44%;transform: translate(-50%, -50%);z-index: 100;}
@@ -39,10 +39,48 @@ ul:after,ol:after,dl:after {content:"";display:block;width:0;height:0;overflow:h
 .minute {width: 3px;height: 38%;margin-left: -1.5px;background-color: #333;}
 .second {width: 2px;height: 40%;margin-left: -1px;background-color: #333;}
 
-.box_main_clock {position: absolute;width: 180px;height: 180px;margin-top: -150px;margin-left: -110px; border-radius: 50%;border: 1px solid #dfdfdf;top: 66%;left: 50%;}
-.box_second {position: absolute;width: 90px;height: 90px;margin-top: 85px;margin-left: 20px; border-radius: 50%;border: 1px solid #dfdfdf;top: 28%;left: 50%;}
+.box_main_clock {position: absolute;width: 180px;height: 180px;margin-top: -150px;margin-left: -110px; border-radius: 50%;border: 1px solid #dfdfdf;top: 66%;left: 50%;background: #f8f8f8f8;}
+.box_second {position: absolute;width: 90px;height: 90px;margin-top: 85px;margin-left: 20px; border-radius: 50%;border: 1px solid #dfdfdf;top: 28%;left: 50%;background: #f8f8f8f8;}
 
-.box_clock_digital {position: absolute;width: 95px;height: 95px; font-size: 0;text-align: left;top: 85px;right: 42px; transform: rotate(90deg);}
+.box_clock_digital {position: absolute;width: 95px;height: 95px; font-size: 0;text-align: left;top: 135px;right: 42px; transform: rotate(90deg);}
 .box_clock_digital .inner_clock_digital {display: inline-block;padding: 3px 3px 3px;box-sizing: border-box; font-family: 'Abril Fatface', cursive;}
 .box_clock_digital .text_clock {display: inline-block;font-size: 14px;color: #333;vertical-align: top;}
 .box_clock_digital .text_clock + .text_clock {margin-left: 5px;}
+
+.box_weather {margin-top: 110px;font-size: 0;text-align: left;}
+.box_weather span {display: inline-block; margin-left: 10px;vertical-align: bottom;}
+.box_weather span:first-child {margin-left: 0;}
+.box_weather .text_temperatue {font-size: 20px;}
+.box_weather .text_place {font-size: 25px;}
+.box_weather .text_mainWeather {font-size: 20px;}
+
+.wrap_todos {margin-top: 30px;}
+.wrap_todos input {padding: 10px;font-size: 20px;font-family: 'Roboto', sans-serif;color: #333; box-sizing: border-box; outline: none; background: rgba(255,255,255,0.3); box-shadow: 10px 10px 10px#2c3e50;}
+.wrap_todos input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #333;
+}
+.wrap_todos input::-moz-placeholder { /* Firefox 19+ */
+  color: #333;
+}
+.wrap_todos input:-ms-input-placeholder { /* IE 10+ */
+  color: #333;
+}
+.wrap_todos input:-moz-placeholder { /* Firefox 18- */
+  color: #333;
+}
+
+.box_todos {margin-top: 20px;margin-right: 20px; padding: 5px 10px 30px; background: rgba(255,255,255,0.3); box-sizing: border-box;}
+.box_todos .title_text {font-family: 'Abril Fatface', cursive;font-size: 30px; color: #333;}
+.list_todos {overflow-y: auto; margin-top: 25px;height: 270px;}
+
+.list_todos::-webkit-scrollbar {width: 5px;}
+.list_todos::-webkit-scrollbar-thumb {background-color: #2f3542;}
+.list_todos::-webkit-scrollbar-track {background-color: grey;}
+
+.list_todos li {margin-top: 10px;padding: 5px 5px 5px;box-sizing: border-box;}
+.list_todos li:first-child {margin-top: 0;}
+
+
+
+.box_finished {margin-top: 25px;}
+

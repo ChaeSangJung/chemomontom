@@ -44,16 +44,26 @@
             <ul class="js-toDoList">
             </ul> -->
             <div class="box_weather">
-                <span class="js_weather"></span>
+                <span class="js_temperatue text_temperatue">${temperatue}°</span>
+                <span class="js_mainWeather text_mainWeather">${mainWeather}</span>
+                <span class="js_place text_place">@${place}</span>                
             </div>
+            
+            <div class="wrap_todos">
+                <input name="todoInput" placeholder="Add task" />            
+                
+                <div class="box_todos">
+                    <div class="box_pending">
+                        <h2 class="title_text">Pending</h2>
+                        <ul class="list_todos pending_list"></ul>
+                    </div>
 
-            <input name="todoInput" placeholder="Add task" />
-
-            <h2>Pending</h2>
-            <ul class="pending_list"></ul>
-
-            <h2>Finished</h2>
-            <ul class="finished_list"></ul>            
+                    <div class="box_finished">
+                        <h2 class="title_text">Finished</h2>
+                        <ul class="list_todos finished_list"></ul>            
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <script src="clock.js"></script>
